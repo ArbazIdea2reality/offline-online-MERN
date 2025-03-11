@@ -8,7 +8,11 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // MongoDB Connection
-mongoose.connect("mongodb://127.0.0.1:27017/syncDB")
+// mongoose.connect("mongodb://127.0.0.1:27017/syncDB")
+
+//for atlas connection
+mongoose.connect("mongodb+srv://arbaz:root@cluster0.hw6ob.mongodb.net/syncDB")
+
 .then(() => {
     console.log('Successfully connected to MongoDB');
 })
